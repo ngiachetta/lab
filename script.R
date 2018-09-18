@@ -49,7 +49,7 @@ std_error_x_m1_b <- broom::tidy(m1_b) %>% pull(std.error) %>% pluck(2)
 var_x_m1_b <- std_error_x_m1_b^2
 
 # Model 2 B
-m2_b <- lm(y ~ x, data = b)
+m2_b <- lm(y ~ x + z, data = b)
 
 summary(m1_b)
 
